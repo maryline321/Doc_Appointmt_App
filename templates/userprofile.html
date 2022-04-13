@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- links -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+	<link rel="stylesheet" href="css/animate.css">
+
+	<style>
+		.carousel-inner img{
+			width: 100%;
+			height: 600px;
+			padding: 20px;
+			padding-top: 50px;
+
+		}
+
+			*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Montserrat";
+}
+:root {
+    --mycolor: rgb(255,0,140)
+}
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: rgb(21,22,26);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+.text {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 40px auto;
+}
+footer input[type='email']{
+    width: calc(100vw - 40vw);
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    border: none;
+    color: var(--mycolor);
+}
+footer input[type='submit']{
+    border: none;
+    outline: none;
+    border-radius: 0 30px 30px 0;
+    padding: 10px;
+    color: #fff;
+    background: var(--mycolor);
+    font-size: 25px;
+    cursor: pointer;
+}
+footer input:hover[type='submit'] {background: rgb(219, 3, 154);}
+.list-footer {
+    margin: 40px auto;
+    display: flex;
+    list-style-type: none;
+}
+.list-footer li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+.list-footer li a:hover{color: var(--mycolor);}
+
+.social-media {
+    margin: 20px auto;
+}
+.social-media i {
+    padding: 20px;
+    font-size: 25px;
+    color: #fff;
+}
+.social-media i:hover{
+    color: rgb(2,255,171);
+}
+
+@media(max-width:810px){
+    .text ,  footer input[type='email'] ,
+    footer input[type='submit'] {
+        font-size: 20px;
+    }
+    .list-footer li a {
+        padding: 15px;
+        font-size: 15px;
+    }
+    .social-media i {
+        padding: 10px;
+    }
+}
+@media(max-width:610px){
+    .text ,  footer input[type='email'] ,
+    footer input[type='submit'] {
+        font-size: 14px;
+    }
+    .list-footer li a {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .social-media i {
+       font-size: 15px;
+    }
+}
+@media(max-width:470px){
+    .text {
+        font-size: 12px;
+    }
+    .list-footer li a {
+        padding: 5px;
+    }
+}
+@media(max-width:330px){
+    .text {
+        font-size: 10px;
+    }
+}
+
+	</style>
+
+</head>
+<body>
+<section>
+<div class="col-md-12">
+			<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			    <a href="" class="navbar-brand text-dark"></a><br>
+			    <h1> <a href="" class="navbar-brand text-white font-weight-bolder ">MY  <br><br> PROFILE</a></h1><br>
+				<h2><p class="logo_w3l_agile_caption">PROFILE PAGE</p></h2>
+
+			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="" ><span class="navbar-toggler-icon"></span></button>
+
+			    <div class="collapse navbar-collapse">
+
+			    	<ol class="navbar-nav ml-auto text" >
+
+
+			    		<li class="nav-item active"  >
+			    			<a class="nav-link text-white font-weight-bold" href="#">Home</a>
+			    		</li>
+
+<!--			    		<li class="nav-item active"  >-->
+<!--			    			<a class="nav-link text-dark font-weight-bold" href="#">About us</a>-->
+<!--						</li>-->
+
+
+			    		<li class="nav-item active"  >
+			    			<a class="nav-link text-white font-weight-bold" href="/doctorsprofile">Book Appointment</a>
+			    		</li>
+
+
+			    		<li class="nav-item active" >
+			    			<a class="nav-link text-white font-weight-bold" href="/userlogin">Log OUT</a>
+
+			    		</li>
+
+
+			    	</ol>
+
+			    </div>
+
+			</nav>
+
+		</div>
+
+	</section>
+<br><br>
+
+
+<!--<h2 class="jumbotron text-center"> My profile</h2>-->
+
+
+
+    <section class="row" >
+
+
+		<div class="col-md-12 text-center  wow fadeInLeft ">
+
+
+			<img src="../static/images/a.png" class="img-fluid img-responsive" width="20%"><br>
+
+			<br><br>
+          <h3><b>My profile</b></h3>
+        <b> You are logged in as: {{email}}</b><br>
+			<h6><b>username:{{row[0]}}</b></h6>
+			<h6><b>Email:{{row[1]}}</b></h6>
+		 <h6><b>phone number:{{row[3]}}</b></h6>
+<!--          <h6>Date joined:{{row[4]}}</h6>-->
+           <a href="/logout" class="btn btn-warning">log Me out</a>
+
+	</div>
+</section>
+
+
+
+<br><br>
+<br><br>
+	<h2 class="jumbotron text-center">Get in Touch With Us</h2>
+<section>
+
+
+	 <footer>
+        <p class="text">Sign up to receive health services and updates</p>
+        <form>
+            <input type="email" required>
+            <input type="submit" value="Sign Up">
+        </form>
+        <ul class="list-footer">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">signup</a></li>
+            <li><a href="#">Book Appointment</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="copyrights">Copy&copy; 2020 Chebet</p>
+    </footer>
+
+</section>
+
+
+
+
+</body>
+</html>

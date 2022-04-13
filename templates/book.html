@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product details</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="jumbotron font-weight-bolder" style="color:red;">{{row[1]}}<br>
+<!--<h4>{{row[4]}}</h4>-->
+<a href="/doctorsprofile" class="btn btn-info">Book Appointment</a>
+    </div>
+<section class="row" style="margin-left:2%; margin-right:2%;">
+
+    <div class="col-md-6">
+
+        <img src="{{row[7]}}" alt="" class="img-fluid" width="60%"><br><br>
+        <p>Doctor's expience:{{row[2]}}</p>
+        <b class="text-warning">Consultation fee:{{row[5]}} KES</b>
+
+    </div>
+
+    <div class="col-md-6">
+        <H4>Doctor's description</H4>
+        <p class="text-muted font-weight-bold">{{row[8]}}</p>
+        <b>category:{{row[3]}}</b><br>
+        <i class="badge badge-warning">{{row[9]}}</i><br>
+        <b>Doctor's number:{{row[6]}}</b><br>
+
+    </div>
+</section>
+<br><br>
+
+{% if session['key'] %}
+<b class="text-center">Current user:{{session['key']}}</b><br>
+<a href="/logout" class="btn btn-warning text-center">log out </a>
+
+<h2 style="margin-left:10%;">Please confirm you would like to request the following appointment</h2>
+<section class="row" style="margin-left:10%;">
+    <div class="col-md-6">
+        <form action='/appointment' method="post">
+            {{message}}
+
+            <label>Your Name</label>
+            <input type="text" name="username" placeholder="your name" class="form-control">
+            <br>
+                <label>Email </label>
+             <input type="email" name="email" placeholder="Email address" class="form-control">
+            <br>
+            <label>Time</label>
+            <input type="datetime-local" name="time" class="form-control">
+            <br>
+            <label>Your phone number</label>
+            <input type="tel" name="telephone" placeholder="phone number" class="form-control">
+            <br>
+            <label>country</label>
+            <input type="text" name="country" class="form-control" placeholder="country">
+            <br>
+            <label>city</label>
+            <input type="text" name="city" class="form-control" placeholder="city">
+            <br>
+            <label>current location</label>
+            <input type="text" name="location" class="form-control" placeholder="current residence">
+            <br>
+            <label>previous medical records</label><br>
+            <textarea name="medical" rows="4" cols="50"></textarea>
+            <br><br>
+            <input type="submit" name="submit" value="Request appointment" class="btn btn-primary">
+             <input type="submit" name="submit" value="cancel appointment" class="btn btn-primary">
+
+        </form>
+
+    </div>
+
+</section>
+{% else %}
+<b>You need to be logged in to book an appointment<a href="/userlogin" class="btn btn-warning">login here</a> </b>
+<a href="/userlogin"></a>
+
+
+{% endif %}
+
+</body>
+</html>
+
+<!--create a pay/request route , save qtty ,product_id,email,code..
+
+you will then need a table named pay with above columns-->

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+<div class="col-md-12">
+			<nav class="navbar navbar-expand-lg navbar-light bg-warning ">
+			    <a href="" class="navbar-brand text-dark"></a><br>
+			    <h1> <a href="" class="navbar-brand text-dark font-weight-bolder "></a></h1><br>
+				<h2><p class="logo_w3l_agile_caption"></p></h2>
+
+			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="" ><span class="navbar-toggler-icon"></span></button>
+
+			    <div class="collapse navbar-collapse">
+
+			    	<ol class="navbar-nav ml-auto text" >
+
+
+			    		<li class="nav-item active"  >
+			    			<a class="nav-link text-dark font-weight-bold" href="/">Home</a>
+			    		</li>
+
+
+
+			    		<li class="nav-item active"  >
+			    			<a class="nav-link text-dark font-weight-bold" href="/contact">contact us</a>
+						</li>
+
+
+
+
+
+			    		<li class="nav-item active" >
+			    			<a class="nav-link text-dark font-weight-bold" href="/logout">Log OUT</a>
+
+			    		</li>
+
+
+			    	</ol>
+
+			    </div>
+
+			</nav>
+
+		</div>
+
+	</section>
+<br><br>
+
+<h2 class="jumbotron text-center">OUR TEAM<br>DOCTORS</h2>
+<span class="alert alert-primary">{{message}}</span>
+<section class="row" style="margin-left:10%;">
+
+        {% for row in rows %}
+    <div class="col-md-4 text-center">
+
+        <img src="{{row[7]}}" alt="" class="img-fluid" width="40%"><br>
+        <b>NAME{{row[1]}}</b><br>
+         <b>{{row[2]}}</b><br>
+		<b>{{row[4]}}</b><br>
+         <i class="text-warning font-weight-bolder">charges:{{row[5]}} KES</i><br>
+         <i>PHONE NUMBER:{{row[6]}}</i><br>
+        <a href="/book{{row[0]}}" class="btn btn-warning">View more</a>
+        <br><br>
+        <b><hr></b>
+
+
+         </div>
+
+    {% endfor %}
+
+
+
+
+</section>
+
+</body>
+</html>
